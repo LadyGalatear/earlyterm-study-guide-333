@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.Test;
 
 public class PracticeTest {
@@ -44,6 +46,26 @@ public class PracticeTest {
         int[] numbers = {3, 3, 3, 3, 3};
         int actual = Practice.maxDiff(numbers);
         assertEquals(0, actual);
+    }
+
+    @Test
+    void testLongest1Word() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("anenome");
+        char letter = 'a';
+        String actual = Practice.longestWord(list, letter);
+        assertEquals("anenome", actual);
+    }
+
+    @Test
+    void testLongest3Word() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("baseball");
+        list.add("basketball");
+        list.add("bowling");
+        char letter = 'b';
+        String actual = Practice.longestWord(list, letter);
+        assertEquals("basketball", actual);
     }
 
     // TODO: Make tests for each problem you solve
