@@ -1,6 +1,8 @@
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.HashMap;
 
 import org.junit.jupiter.api.Test;
 
@@ -66,6 +68,30 @@ public class PracticeTest {
         char letter = 'b';
         String actual = Practice.longestWord(list, letter);
         assertEquals("basketball", actual);
+    }
+
+    @Test
+    void testCountWords() {
+        HashSet<String> set = new HashSet<>();
+        set.add("go");
+        set.add("violin");
+        set.add("right");
+        set.add("now");
+        int n = 2;
+        int m = 6;
+        int actual = Practice.countWords(set, n, m);
+        assertEquals(2, actual);
+    }
+
+    @Test
+    void testOddEvenDifferent() {
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("that", 4);
+        map.put("boy", 3);
+        map.put("ain't", 5);
+        map.put("right", 5);
+        int actual = Practice.oddEvenDifferent(map);
+        assertEquals(2, actual);
     }
 
     // TODO: Make tests for each problem you solve
