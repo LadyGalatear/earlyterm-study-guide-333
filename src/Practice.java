@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -6,14 +8,33 @@ public class Practice {
      * @return the difference between the largest and smallest number
      */
     public static int maxDiff(int[] nums) {
-        // TODO: implement this
-        return -1;
+        int maximum = nums[0];
+        int minimum = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] > maximum) {
+                maximum = nums[i];
+            } else if (nums[i] < minimum) {
+                minimum = nums[i];
+            }
+        }
+
+        return maximum - minimum;
     }
 
+    public static String longestWord(ArrayList<String> list, char character) {
+        return "";
+    }
 
-    // TODO: Implement the other methods from the README AND tests for each one
+    public static int countWords(HashSet<String> set, int n, int m) {
+        return 0;
+    }
 
-    // For each method you are only required to implement it for one of the data
-    // structures. But use a different data structure for each method. For example,
-    // do maxDiff with an array, the next question with a Set, etc.
+    public static int oddEvenDifferent(HashMap<String, Integer> map) {
+        return 0;
+    }
+
+    public static int secondLargest(HashMap<Integer, String> map) {
+        return 0;
+    }
 }
