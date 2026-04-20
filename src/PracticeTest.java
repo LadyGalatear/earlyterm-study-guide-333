@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 
 public class PracticeTest {
 
-    // TODO: Make more tests for maxDiff
     @Test
     void testMaxDiffPositiveAndNegative() {
         // Arrange
@@ -94,8 +93,16 @@ public class PracticeTest {
         assertEquals(2, actual);
     }
 
-    // TODO: Make tests for each problem you solve
-    
+    @Test
+    void testSecondLargest() {
+        HashMap<Integer, String> map = new HashMap<>();
+        map.put(5, "4");
+        map.put(3, "");
+        map.put(9, "gogogo");
+        map.put(1, "I am the alpha and the omega");
+        int actual = Practice.secondLargest(map);
+        assertEquals(5, actual);
+    }
+
+
 }
-
-
