@@ -42,11 +42,30 @@ public class Practice {
     }
 
     public static int countWords(HashSet<String> set, int n, int m) {
-        return 0;
+        int count = 0;
+
+        for (String word : set) {
+            if (word.length() > n && word.length() < m) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
     public static int oddEvenDifferent(HashMap<String, Integer> map) {
-        return 0;
+        int odds = 0;
+        int evens = 0;
+
+        for (Integer value : map.values()) {
+            if (value % 2 == 0) {
+                evens++;
+            } else {
+                odds++;
+            }
+        }
+
+        return odds - evens;
     }
 
     public static int secondLargest(HashMap<Integer, String> map) {
