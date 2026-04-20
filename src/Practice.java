@@ -69,6 +69,18 @@ public class Practice {
     }
 
     public static int secondLargest(HashMap<Integer, String> map) {
-        return 0;
+        int largest = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+
+        for (int value : map.keySet()) {
+            if (value > largest) {
+                second = largest;
+                largest = value;
+            } else if (value > second) {
+                second = value;
+            }
+        }
+
+        return second;
     }
 }
