@@ -23,7 +23,22 @@ public class Practice {
     }
 
     public static String longestWord(ArrayList<String> list, char character) {
-        return "";
+        // look only for words that start with character in array
+        // count number of letters in word
+        // save longest
+
+        String longest = "";
+        String letter = String.valueOf(character);
+
+        for (String word : list) {
+            if (word.startsWith(letter)) {
+                if (longest.length() < word.length()) {
+                    longest = word;
+                }
+            }
+        }
+
+        return longest;
     }
 
     public static int countWords(HashSet<String> set, int n, int m) {
